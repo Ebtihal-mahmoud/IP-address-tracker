@@ -1,0 +1,161 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+header {
+  background: url("images/pattern-bg.png");
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header > p:first-of-type {
+  color: #fff;
+  font-size: 26px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+header .input {
+  min-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+header input {
+  min-width: 80%;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  padding: 16.5px;
+}
+
+header #arrow {
+  background: #000;
+  min-width: 45px;
+  min-height: 50px;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  padding: 15px;
+}
+header #result {
+  min-height: 10%;
+  min-width: 80%;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  position: absolute;
+  top: 19%;
+
+  z-index: 2000;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px;
+}
+
+header #result div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+header #result span {
+  text-transform: uppercase;
+  font-size: 10px;
+  color: hsl(0, 0%, 59%);
+  padding-bottom: 10px;
+}
+
+header #result p {
+  color: hsl(0, 0%, 17%);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+header #result #line {
+  min-height: 25px;
+  background: #ddd;
+  width: 1px;
+  display: block;
+  margin: 0 7px;
+}
+
+/*extra small screen*/
+@media (max-width: 575.999px) {
+  header .input {
+    min-width: 92%;
+  }
+
+  header #result {
+    display: flex;
+    /*min-width: 50%;*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 11px;
+  }
+
+  header #result div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0;
+    line-height: 1.5;
+  }
+
+  header #result div p,
+  header #result div span {
+    font-weight: 500;
+  }
+
+  header #result #line {
+    display: none;
+  }
+}
+/*small screen*/
+@media (min-width: 576px) {
+  header #result {
+    top: 32%;
+  }
+}
+
+/*medium screen*/
+@media (min-width: 768px) {
+  header #result {
+    top: 15%;
+  }
+
+  header #result div {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/*large screen*/
+@media (min-width: 992px) {
+  header #result {
+    top: 20%;
+  }
+}
+
+/* extra large screen */
+/* @media (min-width: 1200px) {
+  header #result {
+    /* top: 20%; */
+/* }
+}  */
+
+/*extra extra large*/
+/* @media (min-width: 1400px) {
+} */
